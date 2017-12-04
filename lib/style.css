@@ -1,0 +1,25 @@
+/*custom stylings*/
+.inner.cover {
+	min-height: 400px;
+}
+.inner.cover > h2 {
+	padding: 50px;
+}
+.chart1 {
+	width: 49%;
+	display: inline-block;
+}
+.chart1>h3 {
+	text-align: left;
+}
+.chartsb {
+	margin: 50px 0;
+}
+h3 {
+	text-transform: uppercase;
+	color: #e4f1fe;
+	text-shadow: 1px 1px 2px #333;
+}
+.inner.cover.t2 {
+	padding-top: 15%;
+}

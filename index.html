@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="COMP2112 Assignment 2">
+    <meta name="author" content="Hailun">
+
+    <title>comp2112 assignment 2</title>
+	<!-- Css -->
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/cover.css" rel="stylesheet">
+    <link href="lib/style.css" rel="stylesheet">	
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+	<link rel="stylesheet" href="lib/morris.css">
+    <!-- Javascript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+	<script src="lib/morris.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+	<script src="lib/app.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h4 class="masthead-brand">COMP2112 Assignment 2</h4>
+              <!-- bootstrap tab headers -->
+              <nav>
+                <ul class="nav  nav-tabs masthead-nav" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Charts</a></li>
+                  <li role="presentation"><a href="#charts" aria-controls="charts" role="tab" data-toggle="tab">README</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+			
+			<div class="tab-content">
+				<!-- first tab panel -->
+				<div role="tabpanel" class="tab-pane active" id="home">
+		          <div class="inner cover">
+		            
+		            <h2>Morris Chart Demo</h2>
+					<!-- donut chart set -->
+					<div class="chart1">
+						<h3>How Women Choose Shampoo</h3>
+			            <div id="graph1" style="width: 79%;"></div>
+						<pre id="code" class="prettyprint linenums sr-only">
+						Morris.Donut({
+						  element: 'graph1',
+						  data: [
+						    {value: 7, label: 'Effectiveness'},
+						    {value: 6, label: 'Brand'},
+						    {value: 8, label: 'Smell'},
+						    {value: 6, label: 'What it does to hair'},
+						    {value: 5, label: 'Ingredients'},
+						    {value: 7, label: 'Color'},
+						    {value: 8, label: 'Quality'},
+						    {value: 7, label: 'Design'},
+						    {value: 6, label: 'Recommendations'},
+						    {value: 8, label: 'Reviews'},
+						    {value: 5, label: 'Quantity'},
+						    {value: 9, label: 'Popularity'}
+						  ],
+						  backgroundColor: '#ccc',
+						  labelColor: '#ECF0F1',
+						  colors: [
+						    '#BE90D4',
+						    '#F0856F',
+						    '#F9BF3B',
+						    '#F1A9A0',
+						    '#F7D93B',
+						    '#199EC7',
+						    '#96D4BF',
+						    '#40BC86',
+						    '#AAEC53',
+						    '#F67E7D',
+						    '#E74C3C',
+						    '#10D2E5'
+						  ],
+						  formatter: function (x) { return x + "%"}
+						});
+						</pre>
+					</div>
+					<div class="chart1">
+						<h3>How Men Choose Shampoo</h3>
+			            <div id="graph2" style="width: 79%;"></div>
+						<pre id="code2" class="prettyprint linenums sr-only">
+						Morris.Donut({
+						  element: 'graph2',
+						  data: [
+						    {value: 100, label: 'It says Shampoo.'}
+						  ],
+						  backgroundColor: '#ccc',
+						  labelColor: '#ECF0F1',
+						  colors: [
+						    '#89C4F4'
+						  ],
+						  formatter: function (x) { return x + "%"}
+						});
+						</pre>
+					</div>
+					<!-- donut chart -->
+					<div class="chartsb">
+						<h3>Content of a Pop Song</h3>
+			            <div id="graph5"></div>
+						<pre id="code5" class="prettyprint linenums sr-only">
+						Morris.Donut({
+						  element: 'graph5',
+						  data: [
+						    {value: 45, label: 'Baby'},
+						    {value: 30, label: 'Ooh'},
+						    {value: 20, label: 'Yeah'},
+						    {value: 5, label: 'Actual Lyrics'}
+						  ],
+						  backgroundColor: '#ccc',
+						  labelColor: '#ECF0F1',
+						  colors: [
+						    '#9A12B3',
+						    '#BF55EC',
+						    '#663399',
+						    '#81CFE0'
+						  ],
+						  formatter: function (x) { return x + "%"}
+						});
+						</pre>
+					</div>
+					<!-- bar chart -->
+					<div class="chartsb">
+						<h3>Usefulness of Fingers in Traffic</h3>
+						<div id="graph3"></div>
+						<pre id="code3" class="prettyprint linenums sr-only">
+						Morris.Bar({
+						  element: 'graph3',
+						  data: [
+						  	{x: 'Thumb', y: 2},
+						    {x: 'Index', y: 3},
+						    {x: 'Middle', y: 10},
+						    {x: 'Ring', y: 3},
+						    {x: 'Pinky', y: 2}
+						  ],
+						  xkey: 'x',
+						  ykeys: ['y'],
+						  labels: ['Y'],
+						  barColors: [
+						    '#F89406'
+						  ]
+						});
+						</pre>
+					</div>
+					<!-- line graph -->
+					<div class="chartsb">
+						<h3>Procrastination on Homework</h3>
+						<div id="graph4"></div>
+						<pre id="code4" class="prettyprint linenums sr-only">
+							Morris.Line({
+							  element: 'graph4',
+							  data: [
+							  	{x: '30 days before due date', y: 0, z: 0},
+							    {x: '25 days before due date', y: 10, z: 3},
+							    {x: '20 days before due date', y: 25, z: 4},
+							    {x: '15 days before due date', y: 40, z: 5},
+							    {x: '10 days before due date', y: 60, z: 5},
+							    {x: '5 days before due date', y: 80, z: 10},
+							    {x: '1 day before due date', y: 100, z: 100}
+							  ],
+							  lineColors: ['#26c281','#6c7a89'],
+							  xkey: 'x',
+							  ykeys: ['y', 'z'],
+							  labels: ['Expected Completion %', 'Reality %'],
+							  parseTime: false
+							});
+						</pre>
+						
+					</div>
+
+		          </div>
+		        </div>
+				
+				<!-- second tab panel -->
+		        <div role="tabpanel" class="tab-pane" id="charts">
+					<div class="inner cover t2">
+		            <h1 class="cover-heading">Morris.js</h1>
+		            <p class="lead">A demonstration of a charting library with dependencies on jQuery and Raphael.</p>
+		            <p class="lead">
+		              <a href="README.txt" class="btn btn-lg btn-default">README file</a>
+		            </p>		            
+					
+		          </div>
+					
+		        </div>
+
+		    </div>
+
+		  <!-- footer -->
+          <div class="mastfoot">
+            <div class="inner">
+              <p><small>Hailun Li, 2016</small></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    
+   
+  </body>
+</html>
